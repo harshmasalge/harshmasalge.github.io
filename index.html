@@ -1,389 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harshvardhan Masalge | AI Portfolio</title>
-    <meta name="description" content="Portfolio of Harshvardhan Masalge — AI Undergraduate at IIT Gandhinagar. Projects in CNNs, Agentic AI, MLOps, and more.">
-    <meta name="keywords" content="Harshvardhan Masalge, AI, IIT Gandhinagar, Machine Learning, Portfolio">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harshvardhan Masalge | AI Undergraduate, IIT Gandhinagar</title>
+<meta name="description" content="Harshvardhan Masalge, B.Tech Artificial Intelligence at IIT Gandhinagar. Portfolio of LLM applications, semantic search, computer vision and full-stack projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
-    <!-- Animated Background Canvas -->
-    <canvas id="neural-bg"></canvas>
-
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>HM<span class="logo-bracket">/&gt;</span>
-            </a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top">Harshvardhan Masalge</a>
+    <nav id="menu">
+      <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#leadership">Leadership</a><a href="#education">Education</a><a href="#contact">Contact</a>
     </nav>
+    <button id="theme" aria-label="Toggle dark mode" title="Toggle theme">◐</button>
+    <button id="burger" aria-label="Menu">☰</button>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <div class="hero-badge">🧠 Artificial Intelligence</div>
-            <h1 class="hero-title">
-                Hi, I'm <span class="gradient-text">Harshvardhan</span>
-            </h1>
-            <p class="hero-subtitle">
-                <span id="typewriter"></span><span class="cursor-blink">|</span>
-            </p>
-            <p class="hero-description">
-                B.Tech in AI at IIT Gandhinagar — building intelligent systems 
-                at the intersection of deep learning, agentic AI, and MLOps.
-            </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">
-                    <span>View Projects</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
-                </a>
-                <a href="#contact" class="btn btn-outline">
-                    <span>Get In Touch</span>
-                </a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="mouse-wheel"></div>
-            </div>
-            <span>Scroll Down</span>
-        </div>
-    </section>
+<main id="top">
+<section class="hero wrap">
+  <p class="eyebrow">B.Tech, Artificial Intelligence · IIT Gandhinagar</p>
+  <h1>Hi, I'm Harshvardhan.<br><span class="accent">I build practical AI systems.</span></h1>
+  <p class="lead">Third-year undergraduate building LLM applications, semantic search, and deep-learning pipelines, and taking them from notebook to deployed product.</p>
+  <div class="cta">
+    <a class="btn primary" href="#projects">View projects</a>
+    <a class="btn" href="https://github.com/harshmasalge" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/harshvardhan-masalge-7139b831b" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="#contact">Contact</a>
+  </div>
+  <dl class="stats">
+    <div><dt>12</dt><dd>public GitHub repos</dd></div>
+    <div><dt>10K+</dt><dd>journals in live semantic search</dd></div>
+    <div><dt>3,000+</dt><dd>students represented as Senate Convener</dd></div>
+    <div><dt>7.84</dt><dd>CPI, IIT Gandhinagar</dd></div>
+  </dl>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="section-number">01.</span> About Me
-            </h2>
-            <div class="about-grid">
-                <div class="about-text reveal">
-                    <p>
-                        I'm a second-year <strong>Artificial Intelligence</strong> undergraduate at 
-                        <strong>IIT Gandhinagar</strong>, driven by a deep curiosity for how machines learn, 
-                        reason, and act autonomously.
-                    </p>
-                    <p>
-                        My work spans satellite imagery classification with CNNs, biomedical signal processing, 
-                        hyperparameter optimization, and building end-to-end agentic AI systems. 
-                        I love turning complex ML pipelines into deployable, real-world applications.
-                    </p>
-                </div>
-                <div class="about-education reveal">
-                    <h3 class="subsection-title">Education</h3>
-                    <div class="education-cards">
-                        <div class="edu-card">
-                            <div class="edu-icon">🎓</div>
-                            <div class="edu-info">
-                                <h4>B.Tech in Artificial Intelligence</h4>
-                                <p>IIT Gandhinagar</p>
-                                <span class="edu-year">2024 — Present</span>
-                            </div>
-                        </div>
-                        <div class="edu-card">
-                            <div class="edu-icon">📚</div>
-                            <div class="edu-info">
-                                <h4>Class XII</h4>
-                                <p>RSML, Latur</p>
-                                <span class="edu-year">2022 — 2024</span>
-                            </div>
-                        </div>
-                        <div class="edu-card">
-                            <div class="edu-icon">🏫</div>
-                            <div class="edu-info">
-                                <h4>Class X</h4>
-                                <p>Vrindavan English School, Aurad</p>
-                                <span class="edu-year">2021 — 2022</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="about" class="wrap">
+  <h2>About</h2>
+  <div class="about">
+    <p>I'm a third-year Artificial Intelligence student at IIT Gandhinagar. I like problems where a model has to become a product: a retrieval pipeline that real users query, a tutor that adapts to a student, a classifier that runs on satellite data.</p>
+    <p>My work spans LLM applications (retrieval, agents, tutoring), classical and deep machine learning, and the full-stack and DevOps needed to ship it: REST APIs, React frontends, Docker, CI security scanning and cloud hosting. Outside code, I lead people: I'm the Convener of the IITGN Student Senate.</p>
+    <p>Awarded the <strong>Explorers' Fellowship</strong> at IITGN: six weeks of independent fieldwork across 10 states studying <em>The Impact of Tourism on Livelihoods of Local Communities</em>.</p>
+  </div>
+</section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="section-number">02.</span> Projects
-            </h2>
-            <p class="section-subtitle">A selection of things I've built — each one a step deeper into AI.</p>
+<section id="projects" class="wrap">
+  <h2>Projects</h2>
+  <p class="sub">All public repositories on my GitHub, ordered from strongest to lightest: production-style, deployed work first.</p>
+  <div class="grid">
+<article class="card featured">
+  <div class="card-top"><span class="rank">01</span><span class="cat">Full-stack · LLM</span></div>
+  <h3>Socratic LLM Tutor</h3>
+  <p class="desc">An AI tutoring platform that builds critical thinking through adaptive questioning, misconception diagnosis and progressive scaffolding instead of handing out answers.</p>
+  <ul><li>Python REST API for student management, persistent chat sessions and response streaming, with dynamic model routing via the OpenAI SDK on OpenRouter.</li><li>React 19 + TypeScript single-page frontend with Tailwind CSS and react-router-dom.</li><li>JWT admin authentication (OAuth2 bearer flow, bcrypt hashing) and an analytics dashboard with searchable logs, full transcript views and one-click export.</li><li>PostgreSQL storage; containerised with Docker Compose.</li></ul>
+  <div class="chips"><span>React</span><span>TypeScript</span><span>FastAPI</span><span>PostgreSQL</span><span>OpenRouter</span><span>Docker</span></div>
+  <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/socratic-llm-tutor" target="_blank" rel="noopener">GitHub</a><a class="btn sm primary" href="https://socratic-llm.onrender.com" target="_blank" rel="noopener">Live demo</a></div>
+</article>
+<article class="card featured">
+  <div class="card-top"><span class="rank">02</span><span class="cat">NLP · Search</span></div>
+  <h3>IITGN E-Journal Semantic Search</h3>
+  <p class="desc">Natural-language discovery for the IITGN e-journals portal. Ask for “AI helping doctors” and get relevant journals, not keyword misses. Built entirely on free, open-source tools.</p>
+  <ul><li>Encoded 10K+ academic journals into 384-dimensional embeddings with Sentence Transformers (all-MiniLM-L6-v2).</li><li>FAISS IndexFlatIP similarity layer for cosine nearest-neighbour retrieval, combined with SQL metadata filtering in a hybrid ranking.</li><li>CI/CD pipeline with automated Bandit, Safety and TruffleHog security scans.</li><li>Shipped as a Dockerised FastAPI microservice with an embeddable JavaScript widget, hosted on Railway.</li></ul>
+  <div class="chips"><span>Python</span><span>FastAPI</span><span>FAISS</span><span>Sentence Transformers</span><span>SQL</span><span>Docker</span><span>CI/CD</span></div>
+  <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/semantic_search_assistant" target="_blank" rel="noopener">GitHub</a><a class="btn sm primary" href="https://semantic-search-assistant.up.railway.app/" target="_blank" rel="noopener">Live demo</a></div>
+</article>
+<article class="card featured">
+  <div class="card-top"><span class="rank">03</span><span class="cat">Full-stack · In development</span></div>
+  <h3>IITGN Alumni &amp; Donor CRM</h3>
+  <p class="desc">An open-source, modular CRM for IIT Gandhinagar&#x27;s Alumni Relations and Institute Advancement offices, designed to replace fragmented spreadsheets.</p>
+  <ul><li>Planned modules: auditable people registry, donation ledger, engagement workspace, reporting and an alumni self-service portal.</li><li>FastAPI modular-monolith backend with React + TypeScript internal frontend.</li><li>Engineering-first process: architecture docs, ADRs, release checkpoints with acceptance criteria and runbooks.</li><li>Actively developed; currently at the M0 foundation milestone.</li></ul>
+  <div class="chips"><span>FastAPI</span><span>React</span><span>TypeScript</span><span>System design</span></div>
+  <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/alumni_crm" target="_blank" rel="noopener">GitHub</a></div>
+</article>
+<article class="card">
+  <div class="card-top"><span class="rank">04</span><span class="cat">Agentic AI</span></div>
+  <h3>Agentic Email Manager</h3>
+  <p class="desc">An autonomous Gmail assistant that reads your inbox, classifies email, extracts tasks and drafts replies, all behind a Streamlit dashboard.</p>
+  <ul><li>Gemini-powered classification into Action Required, Informational and Spam, plus task, deadline and priority extraction.</li><li>Context-aware reply drafting with tone detection and Google Calendar event creation from meeting mentions.</li><li>Priority engine and decision log with reasoning and confidence scores; every action needs manual approval.</li><li>Gmail and Calendar APIs, Google OAuth 2.0, SQLite via SQLAlchemy, background monitoring loop.</li></ul>
+  <div class="chips"><span>Python</span><span>FastAPI</span><span>Gemini</span><span>Gmail API</span><span>Streamlit</span><span>OAuth 2.0</span></div>
+  <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/agentic-email-manager" target="_blank" rel="noopener">GitHub</a></div>
+</article>
+<article class="card">
+  <div class="card-top"><span class="rank">05</span><span class="cat">Agentic AI · In development</span></div>
+  <h3>Finance Agent</h3>
+  <p class="desc">A work-in-progress finance agent platform with a separate backend and frontend, scheduled background jobs and written system-design documents.</p>
+  <ul><li>Python backend with Celery beat scheduling, plus a dedicated frontend.</li><li>Docker Compose setup for running the services together.</li><li>Design-first approach with system design and implementation-plan documents in the repo.</li></ul>
+  <div class="chips"><span>Python</span><span>Celery</span><span>Docker Compose</span></div>
+  <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/finance_agent" target="_blank" rel="noopener">GitHub</a></div>
+</article>
+<article class="card">
+  <div class="card-top"><span class="rank">06</span><span class="cat">Computer vision</span></div>
+  <h3>Satellite Land-Use Classification</h3>
+  <p class="desc">Land-cover classification of Delhi NCR from Sentinel-2 RGB imagery using a ResNet18 CNN.</p>
+  <ul><li>End-to-end pipeline: GeoJSON-based spatial filtering, patch extraction, automated label construction and train/test split.</li><li>Derived dominant land-cover labels from raster data to build a supervised learning dataset.</li><li>Trained and evaluated ResNet18 with accuracy, F1-score and confusion-matrix analysis.</li></ul>
+  <div class="chips"><span>PyTorch</span><span>ResNet18</span><span>Sentinel-2</span><span>GeoJSON</span><span>scikit-learn</span></div>
+  <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/AI-For-Sustainability" target="_blank" rel="noopener">GitHub</a></div>
+</article>
+<article class="card">
+  <div class="card-top"><span class="rank">07</span><span class="cat">Machine learning</span></div>
+  <h3>Real Estate Rent Estimator</h3>
+  <p class="desc">A Streamlit app that estimates rental prices from property attributes, geolocation and market features.</p>
+  <ul><li>Data preprocessing with categorical encoding and feature engineering, plus visual analysis across categories.</li><li>Random Forest Regressor tuned with Grid Search, Random Search and Bayesian Optimization (Optuna); compared via cross-validation and experiment tracking.</li><li>Dockerised and deployed on Hugging Face Spaces.</li></ul>
+  <div class="chips"><span>Python</span><span>Random Forest</span><span>Optuna</span><span>Streamlit</span><span>Docker</span></div>
+  <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/Real-Estate-Rent-Estimator" target="_blank" rel="noopener">GitHub</a><a class="btn sm primary" href="https://huggingface.co/spaces/harshmasalge/sttai" target="_blank" rel="noopener">Live demo</a></div>
+</article>
+<article class="card">
+  <div class="card-top"><span class="rank">08</span><span class="cat">Deep learning</span></div>
+  <h3>Anomaly Detection on Tennessee Eastman Process</h3>
+  <p class="desc">An LSTM autoencoder that learns normal industrial-process behaviour and flags faults from reconstruction error.</p>
+  <ul><li>Stacked LSTM encoder-decoder in PyTorch over 50-timestep sliding windows of 52 process variables and 21 fault types.</li><li>Threshold set at mean + 3σ of validation reconstruction error; evaluated with ROC-AUC, precision/recall/F1 and detection delay.</li><li>Modular, reproducible pipeline: one command runs data loading, training, evaluation and six visualisation types.</li></ul>
+  <div class="chips"><span>PyTorch</span><span>LSTM</span><span>Autoencoder</span><span>Time series</span></div>
+  <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/Anomaly_Detection" target="_blank" rel="noopener">GitHub</a></div>
+</article>
+<article class="card">
+  <div class="card-top"><span class="rank">09</span><span class="cat">Biomedical signals</span></div>
+  <h3>Sleep Apnea Detection from Respiration Signals</h3>
+  <p class="desc">A deep-learning pipeline that classifies breathing anomalies such as hypopneas and apneas from overnight sleep recordings.</p>
+  <ul><li>Processed 8-hour, multi-modal recordings (nasal airflow, thoracic movement, SpO2) from 5 participants with Butterworth band-pass filtering and interpolation.</li><li>Built 30-second windowed datasets with 50% overlap and a custom 1D-CNN (SleepCNN) in PyTorch.</li><li>Evaluated with Leave-One-Participant-Out cross-validation; automated signal visualisation.</li></ul>
+  <div class="chips"><span>PyTorch</span><span>1D CNN</span><span>Signal processing</span><span>NumPy</span></div>
+  <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/AI_for_health" target="_blank" rel="noopener">GitHub</a></div>
+</article>
+<article class="card">
+  <div class="card-top"><span class="rank">10</span><span class="cat">Data analytics</span></div>
+  <h3>Product Hunt Trends Analyzer</h3>
+  <p class="desc">A Streamlit dashboard that explores Product Hunt market dynamics to inform product-launch strategy.</p>
+  <ul><li>Pulls trending products ranked by upvotes from the Product Hunt API.</li><li>Animated gradient visualisation of the most-used tags, with chart export and a mobile-responsive UI.</li></ul>
+  <div class="chips"><span>Python</span><span>Streamlit</span><span>REST API</span></div>
+  <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/Invesho-Vibe-Coder" target="_blank" rel="noopener">GitHub</a><a class="btn sm primary" href="https://invesho-vibe-coder.vercel.app" target="_blank" rel="noopener">Live demo</a></div>
+</article>
+<article class="card">
+  <div class="card-top"><span class="rank">11</span><span class="cat">EdTech · LLM</span></div>
+  <h3>Personalized Micro-Learning Engine</h3>
+  <p class="desc">An adaptive Python-learning platform that keeps lessons short and picks what to learn next based on learner performance.</p>
+  <ul><li>Gemini 2.5 Flash/Pro assess competence and generate a dynamic learning path with instant quiz feedback.</li><li>FastAPI backend with HTML/CSS/JS frontend, deployed on Vercel; includes a freemium business model.</li></ul>
+  <div class="chips"><span>Python</span><span>FastAPI</span><span>Gemini</span><span>Vercel</span></div>
+  <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/AI-For-Education" target="_blank" rel="noopener">GitHub</a></div>
+</article>
+<article class="card">
+  <div class="card-top"><span class="rank">12</span><span class="cat">Web</span></div>
+  <h3>This Portfolio Website</h3>
+  <p class="desc">The site you are reading: hand-written HTML, CSS and JavaScript, responsive with light and dark themes, hosted on GitHub Pages.</p>
+  <ul><li>No frameworks or build step; accessible, mobile-friendly and fast.</li></ul>
+  <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
+  <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/harshmasalge.github.io" target="_blank" rel="noopener">GitHub</a><a class="btn sm primary" href="https://harshmasalge.github.io" target="_blank" rel="noopener">Live demo</a></div>
+</article>
+  </div>
+  <p class="more"><a href="https://github.com/harshmasalge?tab=repositories" target="_blank" rel="noopener">See every repository on GitHub →</a></p>
+</section>
 
-            <!--
-                =============================================
-                HOW TO ADD A NEW PROJECT:
-                1. Copy one <div class="project-card reveal"> block below
-                2. Paste it before the closing </div> of .projects-grid
-                3. Update: data-tag, project-tag text, h3 title,
-                   description <p>, all <li> bullet points,
-                   and the GitHub <a> href link.
-                =============================================
-            -->
-            <div class="projects-grid">
+<section id="skills" class="wrap">
+  <h2>Technical skills</h2>
+  <div class="skills"><div class="skill"><h3>Languages</h3><div class="chips"><span>Python</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>C</span></div></div><div class="skill"><h3>Web & Frameworks</h3><div class="chips"><span>React</span><span>FastAPI</span><span>Streamlit</span><span>HTML</span><span>CSS</span><span>Tailwind</span></div></div><div class="skill"><h3>AI / ML</h3><div class="chips"><span>PyTorch</span><span>scikit-learn</span><span>Sentence Transformers</span><span>FAISS</span><span>LLM APIs (OpenAI SDK, Gemini)</span><span>Optuna</span><span>CNNs & LSTMs</span></div></div><div class="skill"><h3>Tools & Platforms</h3><div class="chips"><span>Git</span><span>Docker</span><span>PostgreSQL</span><span>SQLite</span><span>Google Cloud</span><span>Hugging Face</span><span>Railway</span><span>Render</span><span>Vercel</span></div></div></div>
+</section>
 
-                <!-- Project 1: Satellite Imagery -->
-                <div class="project-card reveal" data-tag="computer-vision">
-                    <div class="project-header">
-                        <div class="project-icon">🛰️</div>
-                        <span class="project-tag">Computer Vision</span>
-                    </div>
-                    <h3>CNN-based Satellite Imagery Classification</h3>
-                    <p>Land-use classification from Sentinel-2 RGB satellite imagery over Delhi NCR using deep learning.</p>
-                    <ul class="project-details">
-                        <li>Trained a ResNet-18 model with GeoJSON-based spatial filtering and transfer learning to address class imbalance</li>
-                        <li>Full pipeline from raw .tif raster processing and .npy feature extraction to geospatial visualization</li>
-                        <li>Evaluated using Weighted F1-score and confusion matrix analysis</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>PyTorch</span><span>ResNet-18</span><span>Transfer Learning</span><span>GeoJSON</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/harshmasalge" target="_blank" rel="noopener noreferrer" class="project-link">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            <span>GitHub</span>
-                        </a>
-                    </div>
-                </div>
+<section id="leadership" class="wrap">
+  <h2>Leadership</h2>
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-h"><h3>Convener, Student Senate, IITGN</h3><span>Apr 2026 – Aug 2026</span></div>
+      <ul>
+        <li>Elected head of the Student Senate, leading 8 secretaries and 22 senators who represent 3,000+ students; chaired student governance discussions with the administration.</li>
+        <li>Spearheaded the Student Guide Program, managing 60+ guides for 700+ incoming first-year students.</li>
+      </ul>
+    </div>
+    <div class="tl-item">
+      <div class="tl-h"><h3>Curation Executive, TEDx IITGN</h3><span>Aug 2024 – Jul 2025</span></div>
+      <ul>
+        <li>Curated and secured speakers for a 500+ audience event, including outreach to Manish Gupta (Senior Director, Google DeepMind).</li>
+        <li>Led speaker pitching, content development and script review to align talks with event themes.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-                <!-- Project 2: Breathing Anomaly -->
-                <div class="project-card reveal" data-tag="deep-learning">
-                    <div class="project-header">
-                        <div class="project-icon">🫁</div>
-                        <span class="project-tag">Deep Learning</span>
-                    </div>
-                    <h3>Breathing Anomaly Detection using 1D CNNs</h3>
-                    <p>Classifying apnea/hypopnea events from multimodal sleep signals using deep 1D convolutional networks.</p>
-                    <ul class="project-details">
-                        <li>Built a PyTorch pipeline with 1D SleepCNN across Nasal Airflow, Thoracic Movement, and SpO₂ signals from 5 participants</li>
-                        <li>Applied Butterworth bandpass filtering and SpO₂ upsampling with sliding-window feature matrices (30s, 50% overlap)</li>
-                        <li>Achieved &gt;90% accuracy using Leave-One-Participant-Out Cross-Validation</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>PyTorch</span><span>1D CNN</span><span>Signal Processing</span><span>LOPO CV</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/harshmasalge" target="_blank" rel="noopener noreferrer" class="project-link">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            <span>GitHub</span>
-                        </a>
-                    </div>
-                </div>
+<section id="education" class="wrap">
+  <h2>Education</h2>
+  <div class="edu">
+    <div><h3>B.Tech, Artificial Intelligence</h3><p>IIT Gandhinagar</p><span>2024 – Present · CPI 7.84</span></div>
+    <div><h3>Class XII · Physics, Chemistry, Maths</h3><p>Rajarshi Shahu Mahavidyalaya</p><span>2022 – 2024 · 75.5%</span></div>
+    <div><h3>Class X · SSC</h3><p>Vrindavan School &amp; Jr. College</p><span>2021 – 2022 · 96.2%</span></div>
+  </div>
+</section>
 
-                <!-- Project 3: Rent Prediction -->
-                <div class="project-card reveal" data-tag="mlops">
-                    <div class="project-header">
-                        <div class="project-icon">🏠</div>
-                        <span class="project-tag">MLOps</span>
-                    </div>
-                    <h3>Dynamic House Rent Prediction Engine</h3>
-                    <p>ML-powered rent predictor across 4 cities with systematic hyperparameter optimization comparison.</p>
-                    <ul class="project-details">
-                        <li>Built a Random Forest model; compared Grid Search, Random Search, and Bayesian Optimization (Optuna) across 60 trials</li>
-                        <li>Deployed via Streamlit UI with Docker containerization and Hugging Face Spaces hosting</li>
-                        <li>Integrated LabelEncoder preprocessing and Trackio experiment tracking</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>Scikit-Learn</span><span>Optuna</span><span>Streamlit</span><span>Docker</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/harshmasalge" target="_blank" rel="noopener noreferrer" class="project-link">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            <span>GitHub</span>
-                        </a>
-                    </div>
-                </div>
+<section id="contact" class="wrap">
+  <h2>Get in touch</h2>
+  <p class="sub">Open to internships and collaborations in AI / ML and software engineering.</p>
+  <div class="contact">
+    <a href="mailto:harshvardhan.masalge@iitgn.ac.in"><small>Email</small>harshvardhan.masalge@iitgn.ac.in</a>
+    <a href="tel:+919665712875"><small>Phone</small>+91 96657 12875</a>
+    <a href="https://www.linkedin.com/in/harshvardhan-masalge-7139b831b" target="_blank" rel="noopener"><small>LinkedIn</small>harshvardhan-masalge</a>
+    <a href="https://github.com/harshmasalge" target="_blank" rel="noopener"><small>GitHub</small>github.com/harshmasalge</a>
+  </div>
+</section>
+</main>
 
-                <!-- Project 4: Gmail Agent -->
-                <div class="project-card reveal" data-tag="agentic-ai">
-                    <div class="project-header">
-                        <div class="project-icon">🤖</div>
-                        <span class="project-tag">Agentic AI</span>
-                    </div>
-                    <h3>Autonomous Gmail Agent</h3>
-                    <p>AI-powered email manager with autonomous classification, task extraction, and smart reply generation.</p>
-                    <ul class="project-details">
-                        <li>Engineered with FastAPI + Google Gemini for email classification, task extraction, and Calendar event creation</li>
-                        <li>Built priority scoring engine with confidence-based decision logging</li>
-                        <li>Deployed on Streamlit with manual approval gates, Google OAuth 2.0, and SQLite persistence</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>FastAPI</span><span>Gemini</span><span>Streamlit</span><span>OAuth 2.0</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/harshmasalge/agentic-email-manager" target="_blank" rel="noopener noreferrer" class="project-link">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            <span>GitHub</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 
-                    =============================================
-                    ADD NEW PROJECTS HERE
-                    Copy any project-card block above and paste here.
-                    =============================================
-                -->
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="section-number">03.</span> Skills
-            </h2>
-            <div class="skills-grid">
-                <div class="skill-category reveal">
-                    <div class="skill-category-header">
-                        <span class="skill-icon">💻</span>
-                        <h3>Languages</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                    </div>
-                </div>
-                <div class="skill-category reveal">
-                    <div class="skill-category-header">
-                        <span class="skill-icon">🔧</span>
-                        <h3>Tools & Frameworks</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">Scikit-Learn</span>
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">Matplotlib</span>
-                        <span class="skill-tag">FastAPI</span>
-                        <span class="skill-tag">Streamlit</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Optuna</span>
-                        <span class="skill-tag">LLM APIs</span>
-                        <span class="skill-tag">Gmail API</span>
-                        <span class="skill-tag">Google Calendar API</span>
-                    </div>
-                </div>
-                <div class="skill-category reveal">
-                    <div class="skill-category-header">
-                        <span class="skill-icon">🧠</span>
-                        <h3>AI / ML Concepts</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">CNNs</span>
-                        <span class="skill-tag">Transfer Learning</span>
-                        <span class="skill-tag">Agentic AI</span>
-                        <span class="skill-tag">LLM Integration</span>
-                        <span class="skill-tag">MLOps</span>
-                        <span class="skill-tag">Hyperparameter Optimization</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="section-number">04.</span> Experience & Leadership
-            </h2>
-            <div class="timeline">
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2026 — Present</span>
-                        <h3>Convener — Student Senate</h3>
-                        <p>IIT Gandhinagar</p>
-                    </div>
-                </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2024 — 2025</span>
-                        <h3>Curation Executive — TEDxIITGandhinagar</h3>
-                        <p>IIT Gandhinagar</p>
-                    </div>
-                </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2024 — 2025</span>
-                        <h3>Class Representative</h3>
-                        <p>IIT Gandhinagar</p>
-                    </div>
-                </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year award">🏆 Award</span>
-                        <h3>Recipient of Explorer's Fellowship</h3>
-                        <p>IIT Gandhinagar</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="section-number">05.</span> Get In Touch
-            </h2>
-            <div class="contact-content reveal">
-                <p class="contact-text">
-                    I'm always open to collaborations, research discussions, or just a friendly chat about AI. 
-                    Feel free to reach out!
-                </p>
-                <div class="contact-links">
-                    <a href="mailto:harshvardhan.masalge@iitgn.ac.in" class="contact-item">
-                        <div class="contact-icon">✉️</div>
-                        <span>harshvardhan.masalge@iitgn.ac.in</span>
-                    </a>
-                    <a href="tel:+919665712875" class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <span>+91 9665712875</span>
-                    </a>
-                    <a href="https://github.com/harshmasalge" target="_blank" rel="noopener noreferrer" class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        </div>
-                        <span>github.com/harshmasalge</span>
-                    </a>
-                </div>
-                <a href="mailto:harshvardhan.masalge@iitgn.ac.in" class="btn btn-primary btn-large">
-                    <span>Say Hello 👋</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>Designed & Built by <span class="gradient-text">Harshvardhan Masalge</span></p>
-            <p class="footer-sub">© 2026 — Built with passion & intelligence.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<footer><div class="wrap">© <span id="yr">2026</span> Harshvardhan Masalge</div></footer>
+<script src="script.js"></script>
 </body>
 </html>
