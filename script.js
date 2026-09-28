@@ -3,7 +3,7 @@
   document.getElementById("yr").textContent = new Date().getFullYear();
   document.getElementById("theme").addEventListener("click", function () {
     var dark = root.dataset.theme
-      ? root.dataset.theme === "dark"
+      ? root.dataset.theme === "light"
       : window.matchMedia("(prefers-color-scheme: dark)").matches;
     var next = dark ? "light" : "dark";
     root.dataset.theme = next;
