@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Harshvardhan Masalge | AI Undergraduate, IIT Gandhinagar</title>
-<meta name="description" content="Harshvardhan Masalge, B.Tech Artificial Intelligence at IIT Gandhinagar. Portfolio of LLM applications, semantic search, computer vision and full-stack projects.">
+<meta name="description" content="Harshvardhan Masalge, B.Tech Artificial Intelligence at IIT Gandhinagar. Portfolio of multi-agent LLM systems, RAG, semantic search, computer vision and full-stack projects.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
 <section class="hero wrap">
   <p class="eyebrow">B.Tech, Artificial Intelligence · IIT Gandhinagar</p>
   <h1>Hi, I'm Harshvardhan.<br><span class="accent">I build practical AI systems.</span></h1>
-  <p class="lead">Third-year undergraduate building LLM applications, semantic search, and deep-learning pipelines, and taking them from notebook to deployed product.</p>
+  <p class="lead">Third-year undergraduate building multi-agent LLM systems, RAG and semantic search, and deep-learning pipelines, and taking them from notebook to deployed product.</p>
   <div class="cta">
     <a class="btn primary" href="#projects">View projects</a>
     <a class="btn" href="https://github.com/harshmasalge" target="_blank" rel="noopener">GitHub</a>
@@ -56,7 +56,15 @@
   <p class="sub">All public repositories on my GitHub, ordered from strongest to lightest: production-style, deployed work first.</p>
   <div class="grid">
 <article class="card featured">
-  <div class="card-top"><span class="rank">01</span><span class="cat">Full-stack · LLM</span></div>
+  <div class="card-top"><span class="rank">01</span><span class="cat">Multi-agent LLM · Full-stack</span></div>
+  <h3>FinSight AI: Multi-Agent Equity Research Assistant</h3>
+  <p class="desc">An AI research analyst for Indian (NSE) stocks. Ask about a company, a comparison or your portfolio and get a cited answer in which every claim links back to the tool call or filing page it came from. The BUY/HOLD/SELL verdict comes from a deterministic scorecard, not the LLM.</p>
+  <ul><li>LangGraph pipeline: an orchestrator routes each question to one of 7 intents, research, sentiment and risk ReAct agents run in parallel, and synthesis returns schema-validated answers (Pydantic, strict JSON schema with a function-calling fallback). A validator checks citations and triggers one revision when needed.</li><li>Rule-based 9-factor scorecard (trend, momentum, RSI, valuation, growth, FinBERT news sentiment, Prophet and XGBoost signals). The LLM explains the verdict but can't change it, which fixed a model that answered HOLD to about half of all questions.</li><li>Hybrid RAG over 15 annual reports and earnings calls: 2,563 pages turned into 7,087 table-aware chunks, BM25 + bge embeddings with reciprocal-rank fusion. Recall@5 0.74 and MRR 0.53 at about 100 ms p50 on a 34-question, page-verified benchmark.</li><li>Evaluation harness with a 25-case eval set, LLM-as-Judge, citation and number-grounding metrics, and latency tracking. A NIFTY 50 backtest showed the price-only signals had no edge (only RSI helped), and I reported that rather than tuning on the test set.</li><li>Human-in-the-loop review: analysts correct answers in plain English, wrong corrections get pushback with evidence, accepted ones are versioned and become cited context in later answers, and approved answers publish as research notes.</li><li>React 19 + TypeScript frontend with a live agent trace and Sources panel. FastAPI streams over SSE, with Celery/Redis jobs and PostgreSQL. The whole stack is deployed on AWS EC2 with Docker Compose and Caddy HTTPS, and works with any provider (Groq, OpenRouter, Gemini, Anthropic).</li></ul>
+  <div class="chips"><span>LangGraph</span><span>RAG</span><span>FastAPI</span><span>React</span><span>TypeScript</span><span>PostgreSQL</span><span>ChromaDB</span><span>Celery</span><span>Docker</span><span>AWS</span></div>
+  <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/finance_agent" target="_blank" rel="noopener">GitHub</a><a class="btn sm primary" href="https://3.94.163.86.sslip.io" target="_blank" rel="noopener">Live demo</a></div>
+</article>
+<article class="card featured">
+  <div class="card-top"><span class="rank">02</span><span class="cat">Full-stack · LLM</span></div>
   <h3>Socratic LLM Tutor</h3>
   <p class="desc">An AI tutoring platform that builds critical thinking through adaptive questioning, misconception diagnosis and progressive scaffolding instead of handing out answers.</p>
   <ul><li>Python REST API for student management, persistent chat sessions and response streaming, with dynamic model routing via the OpenAI SDK on OpenRouter.</li><li>React 19 + TypeScript single-page frontend with Tailwind CSS and react-router-dom.</li><li>JWT admin authentication (OAuth2 bearer flow, bcrypt hashing) and an analytics dashboard with searchable logs, full transcript views and one-click export.</li><li>PostgreSQL storage; containerised with Docker Compose.</li></ul>
@@ -64,7 +72,7 @@
   <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/socratic-llm-tutor" target="_blank" rel="noopener">GitHub</a><a class="btn sm primary" href="https://socratic-llm.onrender.com" target="_blank" rel="noopener">Live demo</a></div>
 </article>
 <article class="card featured">
-  <div class="card-top"><span class="rank">02</span><span class="cat">NLP · Search</span></div>
+  <div class="card-top"><span class="rank">03</span><span class="cat">NLP · Search</span></div>
   <h3>IITGN E-Journal Semantic Search</h3>
   <p class="desc">Natural-language discovery for the IITGN e-journals portal. Ask for “AI helping doctors” and get relevant journals, not keyword misses. Built entirely on free, open-source tools.</p>
   <ul><li>Encoded 10K+ academic journals into 384-dimensional embeddings with Sentence Transformers (all-MiniLM-L6-v2).</li><li>FAISS IndexFlatIP similarity layer for cosine nearest-neighbour retrieval, combined with SQL metadata filtering in a hybrid ranking.</li><li>CI/CD pipeline with automated Bandit, Safety and TruffleHog security scans.</li><li>Shipped as a Dockerised FastAPI microservice with an embeddable JavaScript widget, hosted on Railway.</li></ul>
@@ -72,7 +80,7 @@
   <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/semantic_search_assistant" target="_blank" rel="noopener">GitHub</a><a class="btn sm primary" href="https://semantic-search-assistant.up.railway.app/" target="_blank" rel="noopener">Live demo</a></div>
 </article>
 <article class="card featured">
-  <div class="card-top"><span class="rank">03</span><span class="cat">Full-stack · In development</span></div>
+  <div class="card-top"><span class="rank">04</span><span class="cat">Full-stack · In development</span></div>
   <h3>IITGN Alumni &amp; Donor CRM</h3>
   <p class="desc">An open-source, modular CRM for IIT Gandhinagar&#x27;s Alumni Relations and Institute Advancement offices, designed to replace fragmented spreadsheets.</p>
   <ul><li>Planned modules: auditable people registry, donation ledger, engagement workspace, reporting and an alumni self-service portal.</li><li>FastAPI modular-monolith backend with React + TypeScript internal frontend.</li><li>Engineering-first process: architecture docs, ADRs, release checkpoints with acceptance criteria and runbooks.</li><li>Actively developed; currently at the M0 foundation milestone.</li></ul>
@@ -80,20 +88,12 @@
   <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/alumni_crm" target="_blank" rel="noopener">GitHub</a></div>
 </article>
 <article class="card">
-  <div class="card-top"><span class="rank">04</span><span class="cat">Agentic AI</span></div>
+  <div class="card-top"><span class="rank">05</span><span class="cat">Agentic AI</span></div>
   <h3>Agentic Email Manager</h3>
   <p class="desc">An autonomous Gmail assistant that reads your inbox, classifies email, extracts tasks and drafts replies, all behind a Streamlit dashboard.</p>
   <ul><li>Gemini-powered classification into Action Required, Informational and Spam, plus task, deadline and priority extraction.</li><li>Context-aware reply drafting with tone detection and Google Calendar event creation from meeting mentions.</li><li>Priority engine and decision log with reasoning and confidence scores; every action needs manual approval.</li><li>Gmail and Calendar APIs, Google OAuth 2.0, SQLite via SQLAlchemy, background monitoring loop.</li></ul>
   <div class="chips"><span>Python</span><span>FastAPI</span><span>Gemini</span><span>Gmail API</span><span>Streamlit</span><span>OAuth 2.0</span></div>
   <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/agentic-email-manager" target="_blank" rel="noopener">GitHub</a></div>
-</article>
-<article class="card">
-  <div class="card-top"><span class="rank">05</span><span class="cat">Agentic AI · In development</span></div>
-  <h3>Finance Agent</h3>
-  <p class="desc">A work-in-progress finance agent platform with a separate backend and frontend, scheduled background jobs and written system-design documents.</p>
-  <ul><li>Python backend with Celery beat scheduling, plus a dedicated frontend.</li><li>Docker Compose setup for running the services together.</li><li>Design-first approach with system design and implementation-plan documents in the repo.</li></ul>
-  <div class="chips"><span>Python</span><span>Celery</span><span>Docker Compose</span></div>
-  <div class="links"><a class="btn sm" href="https://github.com/harshmasalge/finance_agent" target="_blank" rel="noopener">GitHub</a></div>
 </article>
 <article class="card">
   <div class="card-top"><span class="rank">06</span><span class="cat">Computer vision</span></div>
@@ -157,7 +157,7 @@
 
 <section id="skills" class="wrap">
   <h2>Technical skills</h2>
-  <div class="skills"><div class="skill"><h3>Languages</h3><div class="chips"><span>Python</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>C</span></div></div><div class="skill"><h3>Web & Frameworks</h3><div class="chips"><span>React</span><span>FastAPI</span><span>Streamlit</span><span>HTML</span><span>CSS</span><span>Tailwind</span></div></div><div class="skill"><h3>AI / ML</h3><div class="chips"><span>PyTorch</span><span>scikit-learn</span><span>Sentence Transformers</span><span>FAISS</span><span>LLM APIs (OpenAI SDK, Gemini)</span><span>Optuna</span><span>CNNs & LSTMs</span></div></div><div class="skill"><h3>Tools & Platforms</h3><div class="chips"><span>Git</span><span>Docker</span><span>PostgreSQL</span><span>SQLite</span><span>Google Cloud</span><span>Hugging Face</span><span>Railway</span><span>Render</span><span>Vercel</span></div></div></div>
+  <div class="skills"><div class="skill"><h3>Languages</h3><div class="chips"><span>Python</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>C</span></div></div><div class="skill"><h3>Web & Frameworks</h3><div class="chips"><span>React</span><span>FastAPI</span><span>Streamlit</span><span>HTML</span><span>CSS</span><span>Tailwind</span></div></div><div class="skill"><h3>AI / ML</h3><div class="chips"><span>LangGraph</span><span>RAG &amp; hybrid retrieval</span><span>LLM evaluation (LLM-as-Judge)</span><span>PyTorch</span><span>scikit-learn</span><span>Sentence Transformers</span><span>FAISS</span><span>ChromaDB</span><span>LLM APIs (OpenAI SDK, Gemini, Anthropic)</span><span>Optuna</span><span>CNNs & LSTMs</span></div></div><div class="skill"><h3>Tools & Platforms</h3><div class="chips"><span>Git</span><span>Docker</span><span>PostgreSQL</span><span>SQLite</span><span>Redis</span><span>Celery</span><span>AWS (EC2)</span><span>Google Cloud</span><span>Hugging Face</span><span>Railway</span><span>Render</span><span>Vercel</span></div></div></div>
 </section>
 
 <section id="leadership" class="wrap">
